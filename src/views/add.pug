@@ -1,0 +1,18 @@
+doctype html
+html
+	head
+	body
+		h4 Add user information information
+		br
+		form(action="/addUser" method="POST" )
+			.form-group
+			label Fisrtname:
+			input(type="text" name="Firstname"  placeholder="Firstname" )
+			.form-group
+			label lastname:
+			input(type="text" name="lastname"  placeholder="Lasttname" )
+			.form-group
+			Label Email:
+			input(type="e-mail" name="e-mail adress" placeholder="E-maiil"  )
+			.form-group
+			button(tyepe="submit") add new user

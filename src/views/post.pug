@@ -1,0 +1,17 @@
+doctype html
+html
+	head
+		link(rel='stylesheet', href='fonts/roboto')
+		link(type='text/css', rel='stylesheet', href='css/materialize.min.css', media='screen,projection')
+	body
+		h4 User information
+
+		if matchedUsers
+			each user in matchedUsers
+				h4(class="card-title")= user.firstname + " " + user.lastname
+				p(class="card-text")= "Email: " + user.email
+		else
+			h4 User is not found
+
+		script(type='text/javascript', src='js/jquery-2.1.1.min.js')
+		script(type='text/javascript', src='js/materialize.min.js')
