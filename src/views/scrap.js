@@ -6,9 +6,7 @@
 
  // tranfered data into objects 
 
-   function addUser(userObject,users) {
-    users.push(userObject);
-
+ 
 
   const userInput1 = request.body.Firstname
   const userInput2 = request.body.lastname
@@ -25,26 +23,32 @@
 
 // how does this work with stringify
 
-  fs.writeFile('users.json', JSON.stringify(newUser), (error, data) => {
+  
+
+
+
+//  funtion mehtod - how do I use my function
+
+
+  function addUser(oldParsedJsonData,newUserObject) {
+    oldParsedJsonData.push(newUserObject);
+
+    var newStringifiedJson = oldParsedJsonData.stringify()
+
+    return newStringifiedJson
+  }
+
+
+  addUser( )
+
+fs.writeFile('users.json', newStringifiedJson , (error, data) => {
       if (error) {
         throw error;
       }
 
 //  not sure about this if have to parse th data be for stringify.
 
-  var parsedData = JSON.parse(data);
-
-    });
-  }
 }; 
-
-
-
-
-//  funtion mehtod - how do I use my funcstions
-
-addUser: function(userObject) {
-    users.push(userObject);
 
 
 
